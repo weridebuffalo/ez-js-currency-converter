@@ -4,17 +4,17 @@ This thingy uses [money.js](https://github.com/openexchangerates/money.js/) and 
 #Installation
 Add the JS to your site @ the bottom.
 
-'''
+Set up a document ready that creates the element.
 
-  (function($){    
-    $(document).ready(function(){
-        $('.currency_converter').xcurrency({
-            baseCurrency: 'NZD',
-            currencies: ["AUD", "CAD", "GBP", "EUR", "JPY", "USD"],
-            curSign: ["$", "$", "£", "€", "¥", "$"]
-          
-        });
-      });
-  })(jQuery)
-  
-''
+
+
+        (function($){    
+          $(document).ready(function(){
+              $('.currency_converter').ezCurrency({
+                  baseCurrency: 'NZD',
+                  currencies: ["AUD", "CAD", "GBP", "EUR", "JPY", "USD"],
+                  curSign: ["$", "$", "£", "€", "¥", "$"]
+              });
+            });
+        })(jQuery)
+
