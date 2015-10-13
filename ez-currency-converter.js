@@ -1,4 +1,11 @@
-
+/* EZ JS CURRENCY CONVERTER!!!!!!!!!!!!!
+ * YAY LETS HAVE FUN AND MAKE MONEY :)
+ */
+ 
+//put your openexchangerates api key, or your link to your other json thingy here 
+var ezOpenRates = "https://openexchangerates.org/api/latest.json?app_id=[yourappid]";
+ 
+ 
 /*!
  * money.js / fx() v0.1.3
  * Copyright 2011, Joss Crowcroft
@@ -304,7 +311,7 @@ var gBase;
         function o() {
             e.ajax({
                 type: "POST",
-                url: "https://openexchangerates.org/api/latest.json?app_id=[yourappid]",
+                url: ezOpenRates,
                 success: function(e) {
                     e === null && r && console.log("success condition. null data returned: " + e)
                 },
@@ -317,7 +324,7 @@ var gBase;
         function u() {
             e.ajax({
                 type: "GET",
-                url: "https://openexchangerates.org/api/latest.json?app_id=[yourappid]",
+                url: ezOpenRates,
                 async: !1,
                 jsonpCallback: "jsonCallback",
                 contentType: "application/json",
