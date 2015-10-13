@@ -2,7 +2,7 @@
 This thingy uses [money.js](https://github.com/openexchangerates/money.js/) and [accounting.js](https://github.com/openexchangerates/accounting.js) with some funky jQuery to enable currency conversion on websites that dont support it (like bigcartel) take a look at [sharkweek.co.nz](http://sharkweek.co.nz) to see it in action.
 
 #Installation
-I use [open exchange rates](https://openexchangerates.org/) for the JSON data for currency.
+I use [open exchange rates](https://openexchangerates.org/) for the JSON data for currency, you'll need to get a app ID or use something else if you dont want to use openexchangerates.
 
 Add the JS to your site @ the bottom.
 
