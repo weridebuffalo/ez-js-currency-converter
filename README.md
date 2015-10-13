@@ -1,6 +1,8 @@
 # very ez n simple currency converter 4 internets
 This thingy uses [money.js](https://github.com/openexchangerates/money.js/) and [accounting.js](https://github.com/openexchangerates/accounting.js) with some funky jQuery to enable currency conversion on websites that dont support it (like bigcartel) take a look at [sharkweek.co.nz](http://sharkweek.co.nz) to see it in action.
 
+![haaa](http://i57.tinypic.com/t9gtuq.png)
+
 #Installation
 I use [open exchange rates](https://openexchangerates.org/) for the JSON data for currency, you'll need to get a app ID or use something else if you dont want to use openexchangerates.
 
