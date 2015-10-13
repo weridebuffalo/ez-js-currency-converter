@@ -276,10 +276,10 @@ function(e) {
 });
 var gBase;
 (function(e) {
-    e.fn.xcurrency = function(t) {
+    e.fn.ezCurrency = function(t) {
         function s() {
             var t = e.cookie("currency");
-            t === n && (e.removeCookie("currency"), e.removeCookie("xrate")), e(".xprice").each(function() {
+            t === n && (e.removeCookie("currency"), e.removeCookie("xrate")), e(".ezprice").each(function() {
                 var r = accounting.unformat(e(this).html()),
                     i = t,
                     s = fx(r).from(n).to(i),
@@ -292,13 +292,13 @@ var gBase;
 	            thousand: ",",  // thousands separator
 	            precision : 2   // decimal places
                 }))
-            }), e(".xprice_options .xoption").each(function() {
+            }), e(".ezprice_options .xoption").each(function() {
                 var t = e(this).attr("id"),
                     n = e(this).attr("value"),
                     r = e(this).children().html(),
                     i = "<option value=" + n + ">" + t + " - " + r + "</option>";
                 e("select#option").append(e(i))
-            }), e(".xprice_options").remove(), e(".unconverted").remove(), e(".converted").removeAttr("style")
+            }), e(".ezprice_options").remove(), e(".unconverted").remove(), e(".converted").removeAttr("style")
         }
 
         function o() {
@@ -342,8 +342,9 @@ var gBase;
         }
         var n = t.baseCurrency || "USD";
         gBase = n;
+        var nS = t.baseSign;
         var r = t.debug || !1;
-        e(this).append('<option data-sign="$" value="' + n + '">' + n + "</option>");
+        e(this).append('<option data-sign="' + nS + '" value="' + n + '">' + n + "</option>");
         for (var i = 0; i < t.currencies.length; i++) e(this).append('<option data-sign="' + t.curSign[i] +'" value="' + t.currencies[i] + '">' + t.currencies[i] + "</option>");
         e.cookie("currency") && (e(this).val(e.cookie("currency")), u()), e(this).change(function() {
             var t = e(this).val();
