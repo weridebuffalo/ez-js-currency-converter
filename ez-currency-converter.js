@@ -3,9 +3,8 @@
  */
  
 //put your openexchangerates api key, or your link to your other json thingy here 
-var ezOpenRates = "https://openexchangerates.org/api/latest.json?app_id=[e5077689f012444289d61ce7f49f2a4a
-]";
- 
+var ezOpenRates = "https://openexchangerates.org/api/latest.json?app_id=e5077689f012444289d61ce7f49f2a4a";
+ alert (ezOpenRates) ;
  
 /*!
  * money.js / fx() v0.1.3
