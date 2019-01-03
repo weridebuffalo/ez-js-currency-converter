@@ -363,3 +363,13 @@ var gBase;
         })
     }
   })(jQuery);
+(function($){    
+      $(document).ready(function(){
+          $('.currency_converter').ezCurrency({
+              baseCurrency: 'NZD',
+              baseSign: '$',
+              currencies: ["AUD", "CAD", "GBP", "EUR", "JPY", "USD"],
+              curSign: ["$", "$", "£", "€", "¥", "$"]
+          });
+        });
+    })(jQuery)
