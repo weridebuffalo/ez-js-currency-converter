@@ -362,7 +362,7 @@ var gBase;
             }), window.location.reload()
         })
     }
-  })(jQuery);
+  });
 (function($){    
       $(document).ready(function(){
           $('.currency_converter').ezCurrency({
@@ -372,4 +372,5 @@ var gBase;
               curSign: ["$", "$", "£", "€", "¥", "$"]
           });
         });
-    })(jQuery)
+    })(jQuery);
+alert ('end of file');
