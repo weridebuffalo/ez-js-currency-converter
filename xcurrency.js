@@ -17,7 +17,7 @@ function convertEl(e) {
     console.log("target" + n), console.log("base" + gBase);
     var r = fx(t).from(gBase).to(n);
     console.log("converted: " + r);
-    var i = "%v %s ";
+    var i = "%s %v";
     $(e).hasClass("no_symbol") && (i = "%v"), $(e).html(accounting.formatMoney(r, {
         symbol: n,
         format: i,
@@ -127,7 +127,7 @@ function(e, t) {
             settings: {
                 currency: {
                     symbol: "$",
-                    format: "%v%s",
+                    format: "%s%v",
                     decimal: ".",
                     thousand: ",",
                     precision: 2,
@@ -189,7 +189,7 @@ function(e, t) {
                     format: h
                 }, f.settings.currency),
                 g = a(d.format);
-            return (0 < e ? g.pos : 0 > e ? g.neg : g.zero).replace("%v", v(Math.abs(e), u(d.precision), d.thousand, d.decimal)).replace("%s", d.symbol)
+            return (0 < e ? g.pos : 0 > e ? g.neg : g.zero).replace("%s", d.symbol).replace("%v", v(Math.abs(e), u(d.precision), d.thousand, d.decimal))
         };
     f.formatColumn = function(e, t, l, c, h, d) {
         if (!e) return [];
@@ -204,7 +204,7 @@ function(e, t) {
             y = g.pos.indexOf("%s") < g.pos.indexOf("%v") ? !0 : !1,
             b = 0,
             e = o(e, function(e) {
-                return r(e) ? f.formatColumn(e, m) : (e = p(e), e = (0 < e ? g.pos : 0 > e ? g.neg : g.zero).replace("%v", v(Math.abs(e), u(m.precision), m.thousand, m.decimal)), e.length > b && (b = e.length), e).replace("%s", m.symbol)
+                return r(e) ? f.formatColumn(e, m) : (e = p(e), e = (0 < e ? g.pos : 0 > e ? g.neg : g.zero).replace("%s", m.symbol).replace("%v", v(Math.abs(e), u(m.precision), m.thousand, m.decimal)), e.length > b && (b = e.length), e)
             });
         return o(e, function(e) {
             return n(e) && e.length < b ? y ? e.replace(m.symbol, m.symbol + Array(b - e.length + 1).join(" ")) : Array(b - e.length + 1).join(" ") + e : e
@@ -282,7 +282,7 @@ var gBase;
                 var r = accounting.unformat(e(this).html()),
                     i = t,
                     s = fx(r).from(n).to(i),
-                    o = " %v%s",
+                    o = " %s%v",
                	    newsymbol = e('option[value="' + i + '"]').attr('data-sign');
                 e(this).hasClass("no_symbol") && (o = "%v"), e(this).html(accounting.formatMoney(s, {
                     symbol: newsymbol,
@@ -339,7 +339,7 @@ var gBase;
                 }
             })
         }
-        var n = t.baseCurrency || "USD";
+        var n = t.baseCurrency || "CAD";
         gBase = n;
         var r = t.debug || !1;
         e(this).append('<option data-sign="$" value="' + n + '">' + n + "</option>");
