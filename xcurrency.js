@@ -303,7 +303,7 @@ var gBase;
         function o() {
             e.ajax({
                 type: "POST",
-                url: "https://openexchangerates.org/api/latest.json?app_id=067e60ad38b5402fbfb8d79dcdaff439",
+                url: "https://openexchangerates.org/api/latest.json?app_id=e5077689f012444289d61ce7f49f2a4a",
                 success: function(e) {
                     e === null && r && console.log("success condition. null data returned: " + e)
                 },
@@ -316,7 +316,7 @@ var gBase;
         function u() {
             e.ajax({
                 type: "GET",
-                url: "https://openexchangerates.org/api/latest.json?app_id=067e60ad38b5402fbfb8d79dcdaff439",
+                url: "https://openexchangerates.org/api/latest.json?app_id=e5077689f012444289d61ce7f49f2a4a",
                 async: !1,
                 jsonpCallback: "jsonCallback",
                 contentType: "application/json",
