@@ -361,8 +361,8 @@ var gBase;
     $(document).ready(function(){
         $('.currency_converter').xcurrency({
             baseCurrency: 'CAD',
-            currencies: ["AUD", "CAD", "USD"],
-            curSign: ["$", "$", "£", "€", "¥", "$"]
+            currencies: ["CAD", "USD"],
+            curSign: ["$", "$"]
           
         });
       });
