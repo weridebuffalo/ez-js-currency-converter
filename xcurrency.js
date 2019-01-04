@@ -19,7 +19,7 @@ function convertEl(e) {
     console.log("converted: " + r);
     var i = "%s %v";
     $(e).hasClass("no_symbol") && (i = "%v"), $(e).html(accounting.formatMoney(r, {
-        symbol: y,
+        symbol: n,
         format: i,
         decimal: ".",  // decimal point separator
 	thousand: ",",  // thousands separator
