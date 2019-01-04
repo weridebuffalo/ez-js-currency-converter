@@ -367,4 +367,3 @@ var gBase;
         });
       });
   })(jQuery)
-alert ('baseCurrency');
